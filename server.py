@@ -11,7 +11,7 @@ def home():
     
     
 
-@app.route('get_location_names', methods=['GET'])
+@app.route('/get_location_names', methods=['GET'])
 def get_location_names():
     response = jsonify({
         'locations': util.get_location_names()
@@ -21,7 +21,7 @@ def get_location_names():
     return response
     
 
-@app.route('predict_house_price', methods=['POST'])
+@app.route('/predict_house_price', methods=['POST'])
 def predict_house_price():
     total_sqft = float(request.form['total_sqft'])
     location = request.form['location']
