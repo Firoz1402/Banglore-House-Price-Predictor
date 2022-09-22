@@ -1,5 +1,5 @@
 FROM python:3.7
-COPY . /server/server
+COPY . /server
 WORKDIR /server
 RUN pip install -r requirements.txt
 EXPOSE $PORT
